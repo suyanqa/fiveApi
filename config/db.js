@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
 
 // 定义数据库连接的 URI
-const mongoURI = 'mongodb://127.0.0.1:27017/fiveApi';
+const mongoURI = 'mongodb://localhost:27017/fiveApi';
 
 // 创建一个函数来处理数据库连接
 const connect = () => {
@@ -13,7 +13,7 @@ const connect = () => {
 
 // 监听数据库连接事件
 mongoose.connection.once('open', async () => {
-  console.log("数据库连接成功111");
+  console.log("数据库连接成功");
 });
 
 mongoose.connection.on('error', (err) => {

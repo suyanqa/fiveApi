@@ -23,6 +23,9 @@ const modelFileSchema = new mongoose.Schema({
   updated_at: {
     type: Date,
     default: Date.now
+  },
+  refreshToken: {
+    type: String,
   }
 });
 
